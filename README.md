@@ -1,5 +1,7 @@
 # Infinite-Carousel 무한 슬라이드 
 
+page : https://jeonseoungil.github.io/Infinite-Carousel/Index
+
 
 자바스크립트를 통해 무한 슬라이드 및 프로그래스바기능 구현
 
