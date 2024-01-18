@@ -1,0 +1,84 @@
+* { margin: 0; padding: 0; }
+li { list-style: none; }
+
+.slide_wrapper {
+  position: relative;
+  width: 660px;
+  margin: 0 auto;
+  height: 200px;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex; /* 수정: flex로 변경 */
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.slides.animated {
+  transition: 0.5s ease-out;
+}
+
+.slides li {
+  flex: 0 0 200px;
+  height: 200px;
+  background: #ccc;
+  margin-right: 30px; /* 수정: 마진을 30px로 조정 */
+}
+
+.controls {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.controls span {
+  background: #333;
+  color: #fff;
+  padding: 10px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+.bar_wrap {
+  position: absolute;
+  bottom: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.bar_wrap > p {
+  font-size: 22px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+.bar {
+  width: 160px;
+  height: 3px;
+  background: violet;
+  position: relative;
+}
+
+.back {
+  display: inline-block;
+  width: 0%;
+  height: 100%;
+  background: gold;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.animation {
+  animation: start 3s linear infinite; /* 무한반복을 위해 infinite 추가 */
+}
+
+@keyframes start {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
